@@ -1,0 +1,55 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .product {
+    width: 250px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .productInfo{
+    width: 95%;
+    margin-right: 10px;
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 30px 50px;
+    border-bottom: 2px solid;
+  }
+
+  .buttons{
+    width: 230px;
+  }
+
+  #delete-product-btn{
+    background-color: red;
+    color: white;
+    font-weight: 700;
+  }
+  
+  .addButton{
+    background-color: rgb(71, 71, 250);
+    color: white;
+    font-weight: 700; 
+  }
+  
+  .cancelButton{
+    background-color: red;
+    color: white;
+    font-weight: 700;
+  }

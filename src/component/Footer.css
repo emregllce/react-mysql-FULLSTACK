@@ -1,0 +1,7 @@
+.footerStyle{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid;
+}

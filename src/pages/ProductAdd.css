@@ -1,0 +1,41 @@
+#product_form{
+    margin: 30px;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+.buttons{
+    width: 25%;
+    display: flex;
+}
+
+.inputStyle{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+button{
+    height: fit-content;
+    padding: 5px 20px;
+}
+
+header{
+    border-bottom: 1px solid;
+    padding: 0 15px;
+}
+/* .plsProvide{
+    display: block;
+} */
