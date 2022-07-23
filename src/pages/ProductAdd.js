@@ -29,12 +29,6 @@ const handleBack = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    products.map((product)=>{
-      if (product.SKU == SKU ) {
-        setSKU("")
-        alert("This SKU has been used before. It should be unique!")
-      }else{
-
        axios.post("http://localhost:5000/api/post", {
           SKU,
           name,
@@ -47,9 +41,7 @@ const handleBack = () => {
         }).then(() => {
           console.log("did it");
         }).catch((err)=>console.log(err));
-        navigate("/");
-      }
-    })
+        navigate("/"); 
   };
 
   return (
