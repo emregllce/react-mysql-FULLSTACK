@@ -53,7 +53,7 @@ const handleBack = () => {
           </div>
           <div className="buttons">
             <div><button type="submit" className="addButton">
-              SAVE
+              Save
             </button></div>
            <div><button type="button" onClick={handleBack} className="cancelButton">CANCEL</button></div>
           </div>
