@@ -11,7 +11,7 @@ const ProductList = () => {
  
   useEffect(() => {
     loadData();
-  }, []);
+  }, [products]);
 
   const handleDelete = () => {
     const checkBoxes = document.getElementsByClassName("delete-checkbox");

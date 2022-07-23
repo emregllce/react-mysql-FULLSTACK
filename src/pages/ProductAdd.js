@@ -46,8 +46,8 @@ const handleBack = () => {
           length
         }).then(() => {
           console.log("did it");
-          navigate("/");
         }).catch((err)=>console.log(err));
+        navigate("/");
       }
     })
   };
