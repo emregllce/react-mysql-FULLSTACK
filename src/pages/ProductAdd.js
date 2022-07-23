@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./ProductAdd.css";
-import Axios from "axios";
+import axios from "axios";
 import TypeSwitcher from "./TypeSwitcher";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ProductAdd = () => {
-  const [type, setType] = useState("");
   const [SKU, setSKU] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
+  const [type, setType] = useState("");
   const [size, setSize] = useState("");
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
@@ -16,31 +16,40 @@ const ProductAdd = () => {
   const [width, setWidth] = useState("");
 
   const navigate = useNavigate();
-
-  
+  const location = useLocation()
+  const products = location.state.products
 
   const handleType = (e) => setType(e.target.value);
 
-  
+
 const handleBack = () => {
-  navigate(-1)
+  navigate("/")
+  // console.log(products);
 }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:5000/api/post", {
-      SKU: SKU,
-      name: name,
-      price: price,
-      size: size,
-      weight: weight,
-      height: height,
-      width: width,
-      length: length,
-    }).then(() => {
-      alert("did it");
-    });
-  navigate("/");
+    products.map((product)=>{
+      if (product.SKU == SKU ) {
+        setSKU("")
+        alert("This SKU has been used before. It should be unique!")
+      }else{
+
+       axios.post("http://localhost:5000/api/post", {
+          SKU,
+          name,
+          price,
+          size,
+          weight,
+          height,
+          width,
+          length
+        }).then(() => {
+          console.log("did it");
+          navigate("/");
+        }).catch((err)=>console.log(err));
+      }
+    })
   };
 
   return (
@@ -54,7 +63,7 @@ const handleBack = () => {
             <div><button type="submit" className="addButton">
               SAVE
             </button></div>
-           <div><button onClick={handleBack} className="cancelButton">CANCEL</button></div>
+           <div><button type="button" onClick={handleBack} className="cancelButton">CANCEL</button></div>
           </div>
         </header>
         <div className="inputs">
@@ -68,6 +77,7 @@ const handleBack = () => {
               onChange={(e) => {
                 setSKU(e.target.value);
               }}
+              value={SKU}
             />
           </div>
           <div className="inputStyle">
@@ -91,7 +101,6 @@ const handleBack = () => {
               required
               onChange={(e) => {
                 setPrice(e.target.value);
-                console.log(price);
               }}
             />
           </div>

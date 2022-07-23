@@ -8,6 +8,10 @@ const ProductList = () => {
   const [checked, setChecked] = useState(false);
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+ 
+  useEffect(() => {
+    loadData();
+  }, []);
 
   const handleDelete = () => {
     const checkBoxes = document.getElementsByClassName("delete-checkbox");
@@ -25,9 +29,6 @@ const ProductList = () => {
     setProducts(response.data);
   };
 
-  useEffect(() => {
-    loadData();
-  }, [products]);
 
   return (
     <div className="main">
@@ -36,7 +37,7 @@ const ProductList = () => {
           <h2>Product List</h2>
         </div>
         <div className="buttons">
-          <button className="addButton" onClick={() => navigate("/addproduct")}>
+          <button className="addButton" onClick={() => navigate("/addproduct", {state: {products}})}>
             ADD
           </button>
           <button id="delete-product-btn" onClick={handleDelete}>

@@ -40,16 +40,19 @@
     background-color: red;
     color: white;
     font-weight: 700;
+    cursor: pointer;
   }
   
   .addButton{
     background-color: rgb(71, 71, 250);
     color: white;
     font-weight: 700; 
+    cursor: pointer;
   }
   
   .cancelButton{
     background-color: red;
     color: white;
     font-weight: 700;
+    cursor: pointer;
   }
