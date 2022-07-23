@@ -52,7 +52,7 @@ const ProductList = () => {
               <input
                 type="checkbox"
                 name="checkbox"
-                className="delete-checkbox"
+                className=".delete-checkbox"
                 onChange={(e) => {
                   setChecked(e.target.checked);
                 }}
