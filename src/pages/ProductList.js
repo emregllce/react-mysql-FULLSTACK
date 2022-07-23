@@ -52,7 +52,7 @@ const ProductList = () => {
               <input
                 type="checkbox"
                 name="checkbox"
-                className=".delete-checkbox"
+                className="delete-checkbox"
                 onChange={(e) => {
                   setChecked(e.target.checked);
                 }}
@@ -60,7 +60,7 @@ const ProductList = () => {
               <div className="productInfo">
                 <h4>{product.SKU}</h4>
                 <h4>{product.name}</h4>
-                <h4>{product.price}</h4>
+                <h4>{product.price} $</h4>
                 <ProductInfo product={product} />
               </div>
             </div>
