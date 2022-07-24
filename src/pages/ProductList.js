@@ -28,7 +28,7 @@ const ProductList = () => {
       let SKU = checkBoxes[i].parentElement.children[1].children[0].innerHTML;
       axios.delete(`http://localhost:5000/api/remove/${SKU}`);
       loadData();
-      console.log("emre2");
+      console.log("emre3");
      }
       
     }
