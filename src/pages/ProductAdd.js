@@ -100,11 +100,11 @@ const handleBack = () => {
             <label>Type Switcher </label>
             <select name="type" id="productType" required onChange={handleType}>
               <option value="">Type Switcher</option>
-              <option id="#DVD" value="DVD">
+              <option id="DVD" value="DVD">
                 DVD
               </option>
               <option id="Book" value="Book">
-                Book
+              NameTest000
               </option>
               <option id="Furniture" value="Furniture">
                 Furniture
