@@ -29,7 +29,7 @@ const handleBack = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-       axios.post("https://scandiwebjrdevtest.herokuapp.com/api/post", {
+       axios.post("http://localhost:5000/api/post", {
           SKU,
           name,
           price,

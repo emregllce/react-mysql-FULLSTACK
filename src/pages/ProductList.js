@@ -26,7 +26,7 @@ const ProductList = () => {
     for (let i = 0; i < checkBoxes.length; i++) {
      if  (checkBoxes[i].checked){
       let SKU = checkBoxes[i].parentElement.children[1].children[0].innerHTML;
-      axios.delete(`https://scandiwebjrdevtest.herokuapp.com/api/remove/${SKU}`);
+      axios.delete(`http://localhost:5000/api/remove/${SKU}`);
       loadData();
      }
       
@@ -34,7 +34,7 @@ const ProductList = () => {
   };
 
   const loadData = async () => {
-    const response = await axios.get("https://scandiwebjrdevtest.herokuapp.com/api/get");
+    const response = await axios.get("http://localhost:5000/api/get");
     setProducts(response.data);
   };
 
