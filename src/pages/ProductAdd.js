@@ -103,8 +103,8 @@ const handleBack = () => {
               <option id="DVD" value="DVD">
                 DVD
               </option>
-              <option id="Book" value="Book">
-              NameTest000
+              <option id="Book" value="NameTest000">
+              Book
               </option>
               <option id="Furniture" value="Furniture">
                 Furniture
