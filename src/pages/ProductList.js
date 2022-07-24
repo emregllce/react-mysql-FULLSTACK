@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ProductInfo from "./ProductInfo";
 
 const ProductList = () => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
  
