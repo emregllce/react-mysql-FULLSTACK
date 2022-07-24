@@ -8,7 +8,7 @@ const TypeSwitcher = ({ type, setSize, setWeight, setLength, setHeight, setWidth
       {type == "DVD" && (
         <div>
           <div className="inputStyle">
-            <label>SIZE (MB)</label>
+            <label>Size (MB)</label>
             <input
               id="size"
               type="number"
