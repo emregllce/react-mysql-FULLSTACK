@@ -15,14 +15,23 @@ const ProductList = () => {
 
   const handleDelete = () => {
     const checkBoxes = document.getElementsByClassName("delete-checkbox");
-    Array.from(checkBoxes).forEach((checkBox) => {
-      if (checkBox.checked) {
-       let SKU = checkBox.parentElement.children[1].children[0].innerHTML;
-       axios.delete(`http://localhost:5000/api/remove/${SKU}`);
-       loadData();
-       console.log("emre");
-      }
-    });
+    // Array.from(checkBoxes).forEach((checkBox) => {
+    //   if (checkBox.checked) {
+    //    let SKU = checkBox.parentElement.children[1].children[0].innerHTML;
+    //    axios.delete(`http://localhost:5000/api/remove/${SKU}`);
+    //    loadData();
+    //    console.log("emre");
+    //   }
+    // });
+    for (let i = 0; i < checkBoxes.length; i++) {
+     if  (checkBoxes[i].checked){
+      let SKU = checkBoxes[i].parentElement.children[1].children[0].innerHTML;
+      axios.delete(`http://localhost:5000/api/remove/${SKU}`);
+      loadData();
+      console.log("emre2");
+     }
+      
+    }
   };
 
   const loadData = async () => {
