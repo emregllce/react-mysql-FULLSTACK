@@ -17,9 +17,10 @@ const ProductList = () => {
     const checkBoxes = document.getElementsByClassName("delete-checkbox");
     Array.from(checkBoxes).forEach((checkBox) => {
       if (checkBox.checked) {
-        let SKU = checkBox.parentElement.children[1].children[0].innerHTML;
+       let SKU = checkBox.parentElement.children[1].children[0].innerHTML;
        axios.delete(`http://localhost:5000/api/remove/${SKU}`);
        loadData();
+       console.log("emre");
       }
     });
   };
