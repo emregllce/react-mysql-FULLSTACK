@@ -11,7 +11,7 @@ const ProductList = () => {
  
   useEffect(() => {
     loadData();
-  }, []);
+  }, [products]);
 
   const handleDelete = () => {
     const checkBoxes = document.getElementsByClassName("delete-checkbox");
@@ -20,7 +20,7 @@ const ProductList = () => {
        let SKU = checkBox.parentElement.children[1].children[0].innerHTML;
        axios.delete(`http://localhost:5000/api/remove/${SKU}`);
        loadData();
-       console.log("emre4");
+       console.log("emre5");
       }
     });
     // for (let i = 0; i < checkBoxes.length; i++) {
