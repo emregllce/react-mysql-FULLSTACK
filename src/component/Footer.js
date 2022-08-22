@@ -3,7 +3,7 @@ import "./Footer.css"
 
 const Footer = () => {
   return (
-    <div className='footerStyle'><h4>Scandiweb Test assignment</h4></div>
+    <div className='footerStyle'><h4>React-MySQL Project</h4></div>
   )
 }
 
